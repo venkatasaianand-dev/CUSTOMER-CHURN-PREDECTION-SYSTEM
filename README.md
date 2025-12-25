@@ -1,5 +1,11 @@
 # Customer Churn Prediction System
 
+![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?logo=react&logoColor=white)
+![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
+![ML](https://img.shields.io/badge/ML-XGBoost-FF6600?logo=xgboost&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-Ollama-000000?logo=ollama&logoColor=white)
+![Language](https://img.shields.io/badge/Languages-TypeScript%20%7C%20Python-3178C6?logo=typescript&logoColor=white)
+
 End-to-end churn analytics for business datasets: upload raw customer data, preprocess it interactively, train an XGBoost model, and generate predictions with explainability powered by a local open-source LLM (Ollama). The LLM is used only for explanations and summaries; predictions come from the ML model.
 
 ## Project Overview
@@ -308,6 +314,11 @@ Auto-generated form captures feature inputs; backend returns probability and ris
 - Training summary with top features  
 - Per-prediction explanation + key factors  
 
+## Dataset
+
+This project uses the Telco Customer Churn dataset from Kaggle:  
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+
 ## Environment Variables
 
 Backend (`backend/.env`):
@@ -442,3 +453,8 @@ Common issues and fixes:
 - The LLM is used strictly for explainability and summaries, not for prediction.
 - All data remains local to the machine running the system, supporting privacy requirements.
 - Reproducibility is supported via deterministic ML settings and stored artifacts.
+
+## Special Thanks
+
+- Kaggle dataset authors and contributors for the Telco Customer Churn dataset:  
+  https://www.kaggle.com/datasets/blastchar/telco-customer-churn
