@@ -2,23 +2,27 @@
 
 <p align="center">
   <a href="https://react.dev" target="_blank">
-    <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white" />
+    <img height="35" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   </a>
+  &nbsp;&nbsp;
 
   <a href="https://fastapi.tiangolo.com" target="_blank">
-    <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" />
+    <img height="35" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   </a>
+  &nbsp;&nbsp;
 
   <a href="https://xgboost.readthedocs.io" target="_blank">
-    <img src="https://img.shields.io/badge/XGBoost-F7931E?logo=scikitlearn&logoColor=white" />
+    <img height="35" src="https://img.shields.io/badge/XGBoost-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
   </a>
+  &nbsp;&nbsp;
 
   <a href="https://ollama.com" target="_blank">
-    <img src="https://img.shields.io/badge/Ollama-000000?logo=ollama&logoColor=white" />
+    <img height="35" src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
   </a>
+  &nbsp;&nbsp;
 
   <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn" target="_blank">
-    <img src="https://img.shields.io/badge/Kaggle%20Dataset-20BEFF?logo=kaggle&logoColor=white" />
+    <img height="35" src="https://img.shields.io/badge/Kaggle%20Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
   </a>
 </p>
 
