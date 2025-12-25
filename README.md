@@ -16,7 +16,7 @@
   </a>
   &nbsp;&nbsp;
 
-  <a href="https://ollama.com" target="_blank">
+  <a href="https://ollama.com/library/llama3.1:8b" target="_blank">
     <img height="40" src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
   </a>
   &nbsp;&nbsp;
