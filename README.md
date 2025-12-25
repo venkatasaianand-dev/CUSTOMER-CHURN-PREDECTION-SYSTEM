@@ -458,6 +458,26 @@ The UI supports light and dark mode via the theme toggle. Screenshots are stored
 9. Results  
    ![Results Screen Dark](<UI%20ScreenShots/DARK/9.%20Results%20Screen%20(DARK).png>)
 
+## Model Plots
+
+To generate evaluation plots (confusion matrix, feature importance, ROC curve), run:
+
+```bash
+python backend\scripts\generate_model_plots.py --data "datasets\telecom.csv" --target "churn" --outdir "UI ScreenShots"
+```
+
+1. Confusion matrix  
+   Shows correct vs. incorrect predictions (TP, TN, FP, FN), so you can see where the model is making mistakes and how balanced the errors are.  
+   ![Confusion Matrix](UI%20ScreenShots/confusion_matrix.png)
+
+2. Feature importance  
+   Ranks the most influential features used by the model, which helps explain what drives churn predictions and guides feature selection.  
+   ![Feature Importance](UI%20ScreenShots/feature_importance.png)
+
+3. ROC curve  
+   Plots true positive rate vs. false positive rate across thresholds, which indicates how well the model separates churn vs. non-churn.  
+   ![ROC Curve](UI%20ScreenShots/roc_curve.png)
+
 ## Error Handling and Troubleshooting
 
 Common issues and fixes:
