@@ -1,16 +1,13 @@
 # Customer Churn Prediction System
 
-![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?logo=react&logoColor=white)
+![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
-![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
+![ML](https://img.shields.io/badge/Machine%20Learning-XGBoost-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
-![ML](https://img.shields.io/badge/ML-XGBoost-FF6600?logo=xgboost&logoColor=white)
-
-![LLM](https://img.shields.io/badge/LLM-Ollama-000000?logo=ollama&logoColor=white)
-
-![Language](https://img.shields.io/badge/Languages-TypeScript%20%7C%20Python-3178C6?logo=typescript&logoColor=white)
-
-[![dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+![Languages](https://img.shields.io/badge/Languages-TypeScript%20%7C%20Python-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 End-to-end churn analytics for business datasets: upload raw customer data, preprocess it interactively, train an XGBoost model, and generate predictions with explainability powered by a local open-source LLM (Ollama). The LLM is used only for explanations and summaries; predictions come from the ML model.
 
