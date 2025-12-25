@@ -1,10 +1,16 @@
 # Customer Churn Prediction System
 
 ![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?logo=react&logoColor=white)
+
 ![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
+
 ![ML](https://img.shields.io/badge/ML-XGBoost-FF6600?logo=xgboost&logoColor=white)
+
 ![LLM](https://img.shields.io/badge/LLM-Ollama-000000?logo=ollama&logoColor=white)
+
 ![Language](https://img.shields.io/badge/Languages-TypeScript%20%7C%20Python-3178C6?logo=typescript&logoColor=white)
+
+[![dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 End-to-end churn analytics for business datasets: upload raw customer data, preprocess it interactively, train an XGBoost model, and generate predictions with explainability powered by a local open-source LLM (Ollama). The LLM is used only for explanations and summaries; predictions come from the ML model.
 
@@ -13,6 +19,7 @@ End-to-end churn analytics for business datasets: upload raw customer data, prep
 **Problem**: Businesses often have churn datasets but lack a simple, reproducible way to train custom churn models and explain results without paid APIs.
 
 **What this project does**:
+
 - Upload CSV/JSON datasets
 - Select target and preprocess features
 - Train an XGBoost churn model with live progress
@@ -20,6 +27,7 @@ End-to-end churn analytics for business datasets: upload raw customer data, prep
 - Produce predictions plus explanations, risks, and recommended actions
 
 **Key features**:
+
 - ML training + prediction workflow
 - UI-guided multi-step experience with light/dark mode
 - LLM-powered dataset summary, training summary, and prediction explanation (Ollama)
@@ -29,24 +37,29 @@ End-to-end churn analytics for business datasets: upload raw customer data, prep
 ## Tech Stack
 
 **Frontend**
+
 - React 18 + TypeScript
 - Vite
 - Tailwind CSS
 
 **Backend**
+
 - FastAPI (Python)
 - Uvicorn
 
 **Machine Learning**
+
 - XGBoost
 - scikit-learn
 - pandas, numpy
 
 **LLM**
+
 - Ollama (local inference)
 - Model: `llama3.1:8b`
 
 **Database**
+
 - None (runtime artifacts stored on local disk under `backend/`)
 
 ## Project Architecture
@@ -55,11 +68,13 @@ High-level flow:
 Frontend (React) -> Backend (FastAPI) -> ML pipeline (XGBoost) -> LLM (Ollama) for explanations only
 
 LLM role (explanations only):
+
 - Dataset summary after preprocessing
 - Training summary and key feature insights
 - Per-prediction explanation and confidence note
 
 Data flow:
+
 - User uploads dataset -> backend stores file and inspects columns
 - User selects target/exclusions -> backend preprocesses and stores processed data
 - User trains model -> backend trains XGBoost pipeline and stores model + metadata
@@ -196,7 +211,7 @@ Data flow:
 
 ## Backend Setup and Run
 
-1) Create and activate a virtual environment:
+1. Create and activate a virtual environment:
 
 ```bash
 cd backend
@@ -205,13 +220,13 @@ python -m venv .venv
 # source .venv/bin/activate  # macOS/Linux
 ```
 
-2) Install dependencies:
+2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3) Create `backend/.env` (optional but recommended):
+3. Create `backend/.env` (optional):
 
 ```env
 APP_NAME=Churn Prediction Backend
@@ -226,7 +241,7 @@ OLLAMA_MAX_TOKENS=256
 CORS_ALLOW_ORIGINS=http://localhost:5173
 ```
 
-4) Run the backend:
+4. Run the backend:
 
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
@@ -234,13 +249,13 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ## Frontend Setup and Run
 
-1) Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2) Configure API base URL (choose one):
+2. Configure API base URL (choose one):
 
 **Option A: Dev proxy (recommended for local dev)**  
 Set `VITE_BACKEND_URL` so Vite proxies backend routes:
@@ -257,7 +272,7 @@ VITE_API_BASE_URL=http://localhost:8000
 VITE_API_TIMEOUT_MS=30000
 ```
 
-3) Run the frontend:
+3. Run the frontend:
 
 ```bash
 npm run dev
@@ -279,6 +294,7 @@ ollama ps
 ```
 
 What each command does:
+
 - `ollama --version`: Verify Ollama is installed.
 - `ollama pull llama3.1:8b`: Download the model used by this project.
 - `ollama run llama3.1:8b`: Start a local session (useful for quick checks).
@@ -287,32 +303,35 @@ What each command does:
 - `ollama ps`: Show currently running models.
 
 When the model must be running:
+
 - Required for dataset summaries, training summaries, and prediction explanations.
 - If Ollama is not running, the backend returns deterministic fallbacks (predictions still work).
 
 Why `llama3.1:8b`:
+
 - Small enough for local machines
 - Good balance between quality and speed
 - Fully open-source and offline-capable
 
 ## Application Workflow
 
-1) **Dataset upload**  
-Upload CSV/JSON; backend parses columns, types, and sample values.
+1. **Dataset upload**  
+   Upload CSV/JSON; backend parses columns, types, and sample values.
 
-2) **Preprocessing**  
-Select target column and exclude features; processed data is stored server-side.
+2. **Preprocessing**  
+   Select target column and exclude features; processed data is stored server-side.
 
-3) **Model training**  
-Train an XGBoost pipeline; view live progress and metrics.
+3. **Model training**  
+   Train an XGBoost pipeline; view live progress and metrics.
 
-4) **Prediction**  
-Auto-generated form captures feature inputs; backend returns probability and risk level.
+4. **Prediction**  
+   Auto-generated form captures feature inputs; backend returns probability and risk level.
 
-5) **LLM-based explanation**  
-- Dataset summary after preprocessing  
-- Training summary with top features  
-- Per-prediction explanation + key factors  
+5. **LLM-based explanation**
+
+- Dataset summary after preprocessing
+- Training summary with top features
+- Per-prediction explanation + key factors
 
 ## Dataset
 
@@ -321,7 +340,9 @@ https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 ## Environment Variables
 
-Backend (`backend/.env`):
+There are no committed env files in this repo. Create them as needed:
+
+Backend (optional `.env` in `backend/`, loaded by `backend/app/core/config.py`):
 
 ```env
 APP_NAME=Churn Prediction Backend
@@ -341,7 +362,7 @@ OLLAMA_MODEL=llama3.1:8b
 OLLAMA_MAX_TOKENS=256
 ```
 
-Frontend (`.env` at project root):
+Frontend (Vite env file at repo root, e.g. `.env` or `.env.local`):
 
 ```env
 VITE_BACKEND_URL=http://localhost:8000
@@ -350,11 +371,13 @@ VITE_API_TIMEOUT_MS=30000
 ```
 
 Ollama (set via backend env variables):
+
 - `OLLAMA_BASE_URL` and `OLLAMA_MODEL`
 
 ## Screens / UI Flow
 
 Screens in the guided wizard:
+
 - Upload
 - Preprocess
 - Train (progress + summary)
@@ -395,50 +418,53 @@ The UI supports light and dark mode via the theme toggle. Screenshots are stored
 ### Dark mode flow
 
 1. Upload screen  
-   ![Upload Screen Dark](UI%20ScreenShots/DARK/1.%20Upload%20Screen%20(DARK).png)
+   ![Upload Screen Dark](<UI%20ScreenShots/DARK/1.%20Upload%20Screen%20(DARK).png>)
 
 2. Upload with file loaded  
-   ![Upload Screen With File Loaded Dark](UI%20ScreenShots/DARK/2.%20Upload%20Screen%20With%20File%20Loaded%20(DARK).png)
+   ![Upload Screen With File Loaded Dark](<UI%20ScreenShots/DARK/2.%20Upload%20Screen%20With%20File%20Loaded%20(DARK).png>)
 
 3. Preprocessing  
-   ![PreProcessing Screen Dark](UI%20ScreenShots/DARK/3.%20PreProcessing%20Screen%20(DARK).png)
+   ![PreProcessing Screen Dark](<UI%20ScreenShots/DARK/3.%20PreProcessing%20Screen%20(DARK).png>)
 
 4. Train preview  
-   ![Train Preview Screen Dark](UI%20ScreenShots/DARK/4.%20Train%20Preview%20Screen%20(DARK).png)
+   ![Train Preview Screen Dark](<UI%20ScreenShots/DARK/4.%20Train%20Preview%20Screen%20(DARK).png>)
 
 5. Training in progress  
-   ![Training Screen Dark](UI%20ScreenShots/DARK/5.%20Training%20Screen%20(DARK).png)
+   ![Training Screen Dark](<UI%20ScreenShots/DARK/5.%20Training%20Screen%20(DARK).png>)
 
 6. Training summary  
-   ![Training Complete and Summary Screen Dark](UI%20ScreenShots/DARK/6.%20Training%20Complete%20and%20Summary%20Screen%20(DARK).png)
+   ![Training Complete and Summary Screen Dark](<UI%20ScreenShots/DARK/6.%20Training%20Complete%20and%20Summary%20Screen%20(DARK).png>)
 
 7. Prediction form  
-   ![Prediction Screen Dark](UI%20ScreenShots/DARK/7.%20Pridection%20Screen%20(DARK).png)
+   ![Prediction Screen Dark](<UI%20ScreenShots/DARK/7.%20Pridection%20Screen%20(DARK).png>)
 
 8. Prediction processing  
-   ![Prediction Processing Screen Dark](UI%20ScreenShots/DARK/8.%20Pridection%20Processing%20Screen%20(DARK).png)
+   ![Prediction Processing Screen Dark](<UI%20ScreenShots/DARK/8.%20Pridection%20Processing%20Screen%20(DARK).png>)
 
 9. Results  
-   ![Results Screen Dark](UI%20ScreenShots/DARK/9.%20Results%20Screen%20(DARK).png)
+   ![Results Screen Dark](<UI%20ScreenShots/DARK/9.%20Results%20Screen%20(DARK).png>)
 
 ## Error Handling and Troubleshooting
 
 Common issues and fixes:
 
-- **Backend not starting**  
-  - Check Python version and dependencies  
+- **Backend not starting**
+
+  - Check Python version and dependencies
   - Ensure port `8000` is free or change `PORT`
 
-- **Frontend API errors (CORS or 404)**  
-  - Set `VITE_BACKEND_URL` or `VITE_API_BASE_URL` correctly  
+- **Frontend API errors (CORS or 404)**
+
+  - Set `VITE_BACKEND_URL` or `VITE_API_BASE_URL` correctly
   - Ensure backend is running and reachable
 
-- **Ollama not responding**  
-  - Start the Ollama service and verify with `ollama ps`  
+- **Ollama not responding**
+
+  - Start the Ollama service and verify with `ollama ps`
   - Confirm `OLLAMA_BASE_URL` is correct (default `http://localhost:11434`)
 
-- **Model not found**  
-  - Run `ollama pull llama3.1:8b`  
+- **Model not found**
+  - Run `ollama pull llama3.1:8b`
   - Verify `OLLAMA_MODEL=llama3.1:8b`
 
 ## Future Enhancements
@@ -453,8 +479,3 @@ Common issues and fixes:
 - The LLM is used strictly for explainability and summaries, not for prediction.
 - All data remains local to the machine running the system, supporting privacy requirements.
 - Reproducibility is supported via deterministic ML settings and stored artifacts.
-
-## Special Thanks
-
-- Kaggle dataset authors and contributors for the Telco Customer Churn dataset:  
-  https://www.kaggle.com/datasets/blastchar/telco-customer-churn
