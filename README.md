@@ -1,25 +1,26 @@
 # Customer Churn Prediction System
 
-<div align="center">
-
-  <h4>Frontend & Backend</h4>
-  <img src="https://img.shields.io/badge/React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-
-  <h4>ML & LLM</h4>
-  <img src="https://img.shields.io/badge/XGBoost-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Ollama-LLM-000000?style=for-the-badge&logo=ollama&logoColor=white" />
-
-  <h4>Languages & Data</h4>
-  <img src="https://img.shields.io/badge/TypeScript%20%7C%20Python-Languages-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  &nbsp;
-  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn">
-    <img src="https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+<p align="center">
+  <a href="https://react.dev" target="_blank">
+    <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white" />
   </a>
 
-</div>
+  <a href="https://fastapi.tiangolo.com" target="_blank">
+    <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" />
+  </a>
+
+  <a href="https://xgboost.readthedocs.io" target="_blank">
+    <img src="https://img.shields.io/badge/XGBoost-F7931E?logo=scikitlearn&logoColor=white" />
+  </a>
+
+  <a href="https://ollama.com" target="_blank">
+    <img src="https://img.shields.io/badge/Ollama-000000?logo=ollama&logoColor=white" />
+  </a>
+
+  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn" target="_blank">
+    <img src="https://img.shields.io/badge/Kaggle%20Dataset-20BEFF?logo=kaggle&logoColor=white" />
+  </a>
+</p>
 
 End-to-end churn analytics for business datasets: upload raw customer data, preprocess it interactively, train an XGBoost model, and generate predictions with explainability powered by a local open-source LLM (Ollama). The LLM is used only for explanations and summaries; predictions come from the ML model.
 
