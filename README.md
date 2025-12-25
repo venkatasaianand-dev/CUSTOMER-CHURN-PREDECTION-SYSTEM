@@ -7,14 +7,10 @@
   &nbsp;
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
 
-<br/><br/>
-
   <h4>ML & LLM</h4>
   <img src="https://img.shields.io/badge/XGBoost-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
   &nbsp;
   <img src="https://img.shields.io/badge/Ollama-LLM-000000?style=for-the-badge&logo=ollama&logoColor=white" />
-
-<br/><br/>
 
   <h4>Languages & Data</h4>
   <img src="https://img.shields.io/badge/TypeScript%20%7C%20Python-Languages-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
