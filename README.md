@@ -2,25 +2,26 @@
 
 <div align="center">
 
-  <p>
-    <img src="https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-    &nbsp;&nbsp;
-    <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  </p>
+  <h4>Frontend & Backend</h4>
+  <img src="https://img.shields.io/badge/React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
 
-  <p>
-    <img src="https://img.shields.io/badge/Machine%20Learning-XGBoost-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-    &nbsp;&nbsp;
-    <img src="https://img.shields.io/badge/LLM-Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
-  </p>
+<br/><br/>
 
-  <p>
-    <img src="https://img.shields.io/badge/Languages-TypeScript%20%7C%20Python-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-    &nbsp;&nbsp;
-    <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn">
-      <img src="https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
-    </a>
-  </p>
+  <h4>ML & LLM</h4>
+  <img src="https://img.shields.io/badge/XGBoost-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Ollama-LLM-000000?style=for-the-badge&logo=ollama&logoColor=white" />
+
+<br/><br/>
+
+  <h4>Languages & Data</h4>
+  <img src="https://img.shields.io/badge/TypeScript%20%7C%20Python-Languages-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  &nbsp;
+  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn">
+    <img src="https://img.shields.io/badge/Kaggle-Dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+  </a>
 
 </div>
 
