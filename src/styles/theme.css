@@ -1,0 +1,66 @@
+/* Theme tokens driven by CSS variables */
+:root {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  --color-accent-400: #f472b6;
+  --color-accent-500: #ec4899;
+  --color-success-500: #10b981;
+  --color-warning-500: #f59e0b;
+  --color-danger-500: #ef4444;
+
+  --surface-1: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-3: #eef2ff;
+  --bg-body: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.08), transparent 30%),
+    #f5f7fb;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 40px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 20px 60px rgba(15, 23, 42, 0.16);
+  --shadow-glow: 0 10px 30px rgba(99, 102, 241, 0.45);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --motion-fast: 150ms ease;
+  --motion-normal: 220ms ease;
+  --motion-slow: 360ms ease;
+}
+
+[data-theme="dark"] {
+  --surface-1: #0b1120;
+  --surface-2: #0f172a;
+  --surface-3: #111827;
+  --bg-body: radial-gradient(circle at 12% 18%, rgba(99, 102, 241, 0.18), transparent 25%),
+    radial-gradient(circle at 85% 0%, rgba(236, 72, 153, 0.16), transparent 28%),
+    #0b1021;
+  --border-subtle: rgba(148, 163, 184, 0.25);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 10px 35px rgba(99, 102, 241, 0.55);
+  --text-primary: #e2e8f0;
+  --text-secondary: #a5b4fc;
+}
+
+.glass-surface {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.94));
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .glass-surface {
+  background: linear-gradient(160deg, rgba(17, 24, 39, 0.7), rgba(15, 23, 42, 0.85));
+  box-shadow: var(--shadow-strong);
+}
